@@ -21,6 +21,9 @@ export default class SignIn extends Component {
             [passwordet]:passwordvalue
         })
     }
+    onSubmit=()=>{
+        alert(`${this.state.email}\n ${this.state.password}`)
+    }
   render() {
     return (
       <div
@@ -53,7 +56,7 @@ export default class SignIn extends Component {
           
         </div>
         <div style={{textAlign:"center",margin:"0px auto",width:"408px"}}>
-            <button >Submit</button>
+            <button onClick={this.onSubmit}>Submit</button>
         </div>
         
       </div>
