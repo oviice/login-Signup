@@ -22,7 +22,13 @@ export default class SignIn extends Component {
         })
     }
     onSubmit=()=>{
-        alert(`${this.state.email}\n ${this.state.password}`)
+        var inputEmail=/\S+@\S+\.\S+/
+        if(!inputEmail.test(this.state.email))
+        {
+            alert("Email is not valid")
+        }
+        else{
+        alert(`${this.state.email}\n ${this.state.password}`)}
     }
   render() {
     return (
